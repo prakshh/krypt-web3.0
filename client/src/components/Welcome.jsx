@@ -4,6 +4,8 @@ import { BsInfoCircle } from 'react-icons/bs';
 
 import { Loader } from './';
 
+const CommonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white";
+
 const Welcome = () => {
 
     const connectWallet = () => {
@@ -29,6 +31,26 @@ const Welcome = () => {
                             Connect Wallet
                         </p>
                     </button>
+                    <div className="grid sm:grid-cols-3 grid-cols-2 w-full mt-10">
+                        <div className={`rounded-tl-2xl ${CommonStyles}`}>
+                            Reliablity
+                        </div>
+                        <div className={CommonStyles}>
+                            Security
+                        </div>
+                        <div className={`rounded-tr-2xl ${CommonStyles}`}>
+                            Ethereum
+                        </div>
+                        <div className={`rounded-bl-2xl ${CommonStyles}`}>
+                            Web 3.0
+                        </div>
+                        <div className={CommonStyles}>
+                            Low Fees
+                        </div>
+                        <div className={`rounded-br-2xl ${CommonStyles}`}>
+                            Blockchain
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
