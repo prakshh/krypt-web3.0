@@ -20,12 +20,28 @@ console.log({
 }
 
 export const TransactionsProvider = ({ children }) => {
-  const [connectedAccount, setConnectedAccount] = useState('initialState');
+  const [currentAccount, setCurrentAccount] = useState('initialState');
 
-const checkIfWalletIsConnect = async () => {
+const checkIfWalletIsConnected = async () => {
+  try{
     if (!ethereum) return alert("Please install MetaMask.");
 
     const accounts = await ethereum.request({ method: "eth_accounts" });
+
+    if (accounts.length) {
+      setCurrentAccount(accounts[0]);
+
+      // getAllTransactions();
+    } else {
+      console.log("No accounts found");
+    }
+  } catch(error){
+      console.log(error);
+
+      throw new Error("No ethereum object");
+  }
+
+    
 
     console.log(accounts);
 }
@@ -45,11 +61,11 @@ const connectWallet = async () => {
 };
 
 useEffect(() => {
-    checkIfWalletIsConnect();
+    checkIfWalletIsConnected();
   }, []);
  
 return (
-        <TransactionContext.Provider value={{ connectWallet }}>
+        <TransactionContext.Provider value={{ connectWallet, currentAccount }}>
           {children}
         </TransactionContext.Provider>
       );
