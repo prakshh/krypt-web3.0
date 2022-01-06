@@ -12,16 +12,14 @@ const getEthereumContract = () => {
   const signer = provider.getSigner();
   const transactionsContract = new ethers.Contract(contractAddress, contractABI, signer);
 
-console.log({
-    provider,
-    signer,
-    transactionsContract
-});
+  return transactionsContract;
 }
 
 export const TransactionsProvider = ({ children }) => {
   const [currentAccount, setCurrentAccount] = useState('');
   const [formData, setFormData] = useState({ addressTo: '', amount: '', keyword: '', message: '' });
+  const [isLoading, setIsLoading] = useState(false);
+  const [transactionCount, setTransactionCount] = useState(localStorage.getItem('transactionCount'));
 
   const handleChange = (e, name) => {
     setFormData((prevState) => ({ ...prevState, [name]: e.target.value }));
@@ -69,7 +67,32 @@ const sendTransaction = async () => {
 
     // get the data from the form
     const { addressTo, amount, keyword, message } = formData;
-    getEthereumContract();
+    const transactionsContract = getEthereumContract();
+    const parsedAmount = ethers.utils.parseEther(amount);
+
+    await ethereum.request({
+      method: "eth_sendTransaction",
+      params: [{
+        from: currentAccount,
+        to: addressTo,
+        gas: "0x5208", // 21000 GWEI
+        value: parsedAmount._hex, // 0.00001
+      }],
+    });
+
+    const transactionHash = await transactionsContract.addToBlockchain(addressTo, parsedAmount, message, keyword);
+
+    setIsLoading(true);
+    console.log(`Loading - ${transactionHash.hash}`);
+    await transactionHash.wait();
+    setIsLoading(false);
+    console.log(`Success - ${transactionHash.hash}`);
+
+    const transactionsCount = await transactionsContract.getTransactionCount();
+
+    setTransactionCount(transactionsCount.toNumber());
+
+
   } 
   catch (error) {
     console.log(error);
