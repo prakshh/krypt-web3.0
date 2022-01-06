@@ -20,12 +20,8 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
   );
 
 const Welcome = () => {
-    const { value } = useContext(TransactionContext);
-    console.log(value);
+    const { connectWallet } = useContext(TransactionContext);
 
-    const connectWallet = () => {
-
-    }
     const handleSubmit = () => {
 
     }
