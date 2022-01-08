@@ -36,6 +36,7 @@ body {
 }
 
 .gradient-bg-footer {
+  margin-bottom: -30px;
   background-color: #0f0e13;
   background-image: 
     radial-gradient(at 0% 100%, hsla(253,16%,7%,1) 0, transparent 53%), 
