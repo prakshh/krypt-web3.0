@@ -1,14 +1,14 @@
 # Krypt - Modern Web 3.0 Blockchain Application
 
 ![Krypt1](client/images/Screenshot-from-2022-01-10-17-10-20.png)
-![Krypt2](client/images/Screenshot from 2022-01-10 17-14-12.png)
-![Krypt3](client/images/Screenshot from 2022-01-10 17-20-16.png)
-![Krypt4](client/images/Screenshot from 2022-01-10 17-22-07.png)
-![Krypt5](client/images/Screenshot from 2022-01-10 17-22-15.png)
-![Krypt6](client/images/Screenshot from 2022-01-10 17-22-21.png)
-![Krypt7](client/images/Screenshot from 2022-01-10 17-23-05.png)
-![Krypt8](client/images/Screenshot from 2022-01-10 17-29-16.png)
-![Krypt9](client/images/Screenshot from 2022-01-10 17-29-20.png)
+![Krypt2](client/images/Screenshot-from-2022-01-10-17-14-12.png)
+![Krypt3](client/images/Screenshot-from-2022-01-10-17-20-16.png)
+![Krypt4](client/images/Screenshot-from-2022-01-10-17-22-07.png)
+![Krypt5](client/images/Screenshot-from-2022-01-10-17-22-15.png)
+![Krypt6](client/images/Screenshot-from-2022-01-10-17-22-21.png)
+![Krypt7](client/images/Screenshot-from-2022-01-10-17-23-05.png)
+![Krypt8](client/images/Screenshot-from-2022-01-10-17-29-16.png)
+![Krypt9](client/images/Screenshot-from-2022-01-10-17-29-20.png)
 
 ## Introduction
 This is a code repository of Modern Web 3.0 Blockchain Application using Solidity and Smart Contracts.
