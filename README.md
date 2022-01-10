@@ -11,7 +11,7 @@
 ![Krypt9](client/images/Screenshot-from-2022-01-10-17-29-20.png)
 
 ## Introduction
-This is a code repository of Modern Web 3.0 Blockchain Application using Solidity and Smart Contracts.
+This is a code repository of Modern Web 3.0 Blockchain Application using React, Solidity and Smart Contracts.
 
 Krypt is the #Web3 #Blockchain app with a stunning design, connected to the blockchain, metamask pairing, interaction with smart contracts, sending Ethereum through the blockchain network, writing solidity code, and much more.
 
