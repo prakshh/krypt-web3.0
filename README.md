@@ -1,6 +1,6 @@
 # Krypt - Modern Web 3.0 Blockchain Application
 
-![Krypt1](client/images/Screenshot from 2022-01-10 17-10-20.png)
+![Krypt1](client/images/Screenshot-from-2022-01-10-17-10-20.png)
 ![Krypt2](client/images/Screenshot from 2022-01-10 17-14-12.png)
 ![Krypt3](client/images/Screenshot from 2022-01-10 17-20-16.png)
 ![Krypt4](client/images/Screenshot from 2022-01-10 17-22-07.png)
