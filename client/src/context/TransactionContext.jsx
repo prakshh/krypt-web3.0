@@ -108,7 +108,7 @@ const sendTransaction = async () => {
 
     // get the data from the form
     const { addressTo, amount, keyword, message } = formData;
-    const transactionsContract = getEthereumContract();
+    const transactionsContract = createEthereumContract();
     const parsedAmount = ethers.utils.parseEther(amount);
 
     await ethereum.request({
