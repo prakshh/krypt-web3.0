@@ -1,6 +1,8 @@
 # Krypt - Modern Web 3.0 Blockchain Application
 
-[# LIVE SITE](https://krypt-web3-prakshh.netlify.app/)
+<a href="https://krypt-web3-prakshh.netlify.app/" target="_blank">
+    <h1>LIVE SITE</h>
+</a>
 
 ![Krypt1](client/images/Screenshot-from-2022-01-10-17-10-20.png)
 ![Krypt2](client/images/Screenshot-from-2022-01-10-17-14-12.png)
